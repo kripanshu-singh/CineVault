@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getgenres } from "./store/homeSlice";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import PageNotFound from "./pages/404/PageNotFound";
@@ -63,6 +63,7 @@ function App() {
                 </Routes>
                 <Footer />
                 <SpeedInsights />
+                <Analytics />
             </BrowserRouter>
         </>
     );
