@@ -3,6 +3,7 @@ import fetchDataApi from "./utils/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getgenres } from "./store/homeSlice";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -61,6 +62,7 @@ function App() {
                     <Route path="*" element={<PageNotFound />} />
                 </Routes>
                 <Footer />
+                <SpeedInsights />
             </BrowserRouter>
         </>
     );
