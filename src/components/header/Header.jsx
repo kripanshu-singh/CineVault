@@ -37,10 +37,11 @@ const Header = () => {
         };
     }, [lastScrollY]);
     const searchQuerryHandler = (e) => {
-        if ((e.key === "Enter" || e.type === "click") && query.length > 0) {
+        if (e.key === "Enter" && query.length > 0) {
             navigate(`/search/${query}`);
             setTimeout(() => {
                 setShowSearch(false);
+                setQuery("");
             }, 1000);
         }
     };
