@@ -23,10 +23,10 @@ const HeroBanner = () => {
 
     useEffect(() => {
         const bg =
-            url.backdrop +
+            url?.backdrop +
             data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
         setBackGround(bg);
-    }, [data]);
+    }, [data, url]);
     return (
         <div className="heroBanner">
             {!loading && (
