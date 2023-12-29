@@ -28,9 +28,17 @@
         }
     }
     .carouselLeftNav {
+        font-size: 40px;
+        padding: 2px;
+        border-radius: 50% 50%;
+        background: var(--gradient);
         left: 30px;
     }
     .carouselRighttNav {
+        font-size: 40px;
+        padding: 1px;
+        border-radius: 50% 50%;
+        background: var(--gradient);
         right: 30px;
     }
     .loadingSkeleton {
