@@ -17,7 +17,9 @@ const Header = () => {
     const [showSearch, setShowSearch] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
-    useEffect(() => window.scrollTo(0, 0), [location]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
     const controlNavBar = () => {
         if (window.scrollY > 300) {
             if (window.scrollY > lastScrollY && !mobileMenu) {

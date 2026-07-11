@@ -48,7 +48,7 @@ const Explore = () => {
                 if (data?.results) {
                     setData({
                         ...data,
-                        results: [...data?.results, ...res.results],
+                        results: [...data.results, ...(res?.results || [])],
                     });
                 } else {
                     setData(res);
@@ -133,7 +133,7 @@ const Explore = () => {
                         {data?.results?.length > 0 ? (
                             <InfiniteScroll
                                 className="content"
-                                dataLength={data?.results?.length || []}
+                                dataLength={data?.results?.length || 0}
                                 next={fetchNextPageData}
                                 hasMore={pageNum <= data?.total_pages}
                                 loader={<Spinner />}
